@@ -8,7 +8,9 @@ import java.awt.*;
 public class Ocp {
 
     public static void main(String[] args) {
-
+        GraphicEditer g = new GraphicEditer();
+        g.deawShape(new Rectangle() );
+        g.deawShape(new Circle() );
     }
 }
 
@@ -18,7 +20,7 @@ class GraphicEditer{
             drawRectangle(s);
         }
         else if(s.m_type == 2){
-            deawCircle(s);
+            drawCircle(s);
         }
     }
 
@@ -26,7 +28,7 @@ class GraphicEditer{
         System.out.println("矩形");
     }
 
-    public void deawCircle(Shape r){
+    public void drawCircle(Shape r){
         System.out.println("圆形");
     }
 }
@@ -34,3 +36,29 @@ class GraphicEditer{
 class Shape{
     int m_type;
 }
+
+class Rectangle extends Shape{
+    Rectangle(){
+        super.m_type = 1;
+    }
+}
+
+class Circle extends Shape{
+    Circle(){
+        super.m_type = 2;
+    }
+}
+
+/**
+ * 新增画三角形的一个类
+ */
+
+class Triangle extends Shape{
+    Triangle(){
+        super.m_type = 3;
+    }
+}
+
+/**
+ * 改进方法 将Shape 做成一个抽象类，然后让三种形状去继承这个抽象类
+ */
