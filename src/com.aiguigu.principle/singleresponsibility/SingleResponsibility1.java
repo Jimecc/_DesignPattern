@@ -1,7 +1,8 @@
 /**
  * @author Jim
- * @Description 单一职责原则
- * 方案一不遵守单一职责原则
+ * @Description 单一职责原则1
+ * 因为Vehicle 要执行天上、地上、水里的三种不同的方法
+ * 所一他违背了单一职责原则
  * @createTime 2022年08月12日
  */
 public class SingleResponsibility1 {
