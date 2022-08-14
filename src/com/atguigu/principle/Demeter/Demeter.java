@@ -3,7 +3,7 @@ import java.util.List;
 
 /**
  * @author Jim
- * @Description 迪米特法则
+ * @Description 迪米特法则 最少知道原则
  * @createTime 2022年08月12日
  */
 public class Demeter {
@@ -66,6 +66,11 @@ class SchoolManager{
     }
 
     void printAllEmployee(CollegeManager sub){
+
+        /**
+         * 1。这里的 CollegeEmployee 不是 SchoolManager 的直接朋友
+         * 2。CollegeEmployee 是以局部变量的形式出现在 SchoolManager 里面
+         */
         List<CollegeEmployee> list1 = sub.getAllEmployee();
         System.out.println("----------分公司员工----------");
         for (CollegeEmployee collegeEmployee : list1) {
